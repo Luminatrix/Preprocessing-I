@@ -1,1 +1,310 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1 {
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+  line-height: 3.125rem;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1.6rem;
+  line-height: 3.125rem;
+  font-weight: bold;
+}
+hr {
+  border: 0.5px solid lightgrey;
+}
+p {
+  margin: 20px 0px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+a {
+  text-decoration: none;
+}
+.wrapcontainer {
+  max-width: 900px;
+  margin: auto;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapcontainer nav {
+  max-width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.wrapcontainer nav a {
+  margin-left: 4%;
+  font-size: 1.02rem;
+  text-decoration: none;
+  color: black;
+}
+.wrapcontainer nav a:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .wrapcontainer nav {
+    justify-content: space-evenly;
+  }
+  .wrapcontainer nav a {
+    margin-left: 0px;
+  }
+}
+.wrapcontainer section.topresume {
+  padding: 60px 4%;
+  background-color: lightpink;
+}
+.wrapcontainer section.topresume img {
+  max-width: 300px;
+}
+.wrapcontainer section.topresume h2 {
+  margin-top: 15px;
+}
+.wrapcontainer section.topresume .btn {
+  width: 150px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: lightblue;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .wrapcontainer section.topresume img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.wrapcontainer section.summary p {
+  margin-top: 0px;
+}
+.wrapcontainer section.skillset ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapcontainer section.skillset ul li {
+  padding: 15px;
+  border: 0.5px solid lightblue;
+  border-bottom: none;
+  display: flex;
+}
+.wrapcontainer section.skillset ul li:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.wrapcontainer section.skillset ul li:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom: 0.5px solid lightgrey;
+}
+.wrapcontainer section.work-history table {
+  width: 100%;
+}
+.wrapcontainer section.work-history th {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  text-align: left;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.wrapcontainer section.work-history tr {
+  height: 45px;
+}
+.wrapcontainer section.work-history tr td:first-child {
+  font-weight: bold;
+}
+.wrapcontainer section.work-history tr:nth-child(even) {
+  background-color: lightblue;
+}
+.wrapcontainer section.work-history td {
+  vertical-align: middle;
+}
+@media (max-width: 500px) {
+  .wrapcontainer section.work-history {
+    margin-top: 20px;
+  }
+}
+.listen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.listen .listenup {
+  width: 50%;
+  padding-left: 5px;
+}
+@media (max-width: 500px) {
+  .listen {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.half {
+  width: 48.5%;
+}
+@media (max-width: 500px) {
+  .half {
+    width: 100%;
+  }
+}
+footer.copyright {
+  height: 80px;
+  margin-top: 30px;
+  color: white;
+  background-color: plum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
