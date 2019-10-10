@@ -56,4 +56,219 @@ table {
 html, body {
     height: 100%;
 }
+//MY CODE STARTS HERE
+//import
+
+//base element styles (all text & Flex mixins)
+h1 {
+	font-size:3.5rem;
+	line-height:3.75rem;
+}
+
+h2 {
+	font-size:1.5rem;
+	line-height:2.5rem;
+}
+
+h3 {
+	font-size:2.0rem;
+	line-height:3.125rem;
+	font-weight:bold;
+}
+h4 {
+	font-size:1.6rem;
+	line-height:3.125rem;
+	font-weight:bold;
+}
+
+hr {
+	border:0.5px solid lightgrey;
+}
+
+p {
+	margin:20px 0px;
+	line-height:1.5rem;
+	font-size:1.2rem;
+}
+
+a {
+	text-decoration:none;
+}
+
+.flex-column() {
+	display:flex;
+	flex-direction:column;
+}
+
+.flex-row() {
+	display:flex;
+	flex-direction:row;
+}
+
+//base page styles
+
+.wrapcontainer{
+	max-width:900px;
+	margin:auto;
+	padding-top: 0px;
+	.flex-column(); //styles wrapper and applies base column structure 
+
+
+nav {
+	max-width:100%;
+	height:80px;
+	.flex-row();//styles nav and applies base row structure
+	justify-content:flex-end; //styles nav at end of header container
+	align-items:center; //styles nav in center of container (at end re: justify-content above)
+
+	a { //styles text in navbar
+		margin-left:4%;
+		font-size:1.02rem;
+		text-decoration: none;
+		color:black;
+	}
+
+	a:hover { //styles nav elements to follow rulesets below when hovered over with cursor
+		cursor:pointer; //makes cursor into pointing hand when hover over nav links
+		font-weight:bold; //boldens the text of the nav a links to become bold when pointing hand hovers over
+	}
+
+	@media (max-width:500px){ //media query for nav on devices 500px and below
+		justify-content:space-evenly;
+		//nested Less styles for media query in nav -devices 500px and below
+		a {
+			margin-left:0px;
+		}
+	}
+}
+//nav ends here, Less nav styles end here, don't forget curly braces
+
+//section styles start here listen&skills
+
+section.topresume{ //calling the section class top-resume
+	padding:60px 4%;
+	background-color:lightpink;
+//begins Less nested styles for top-resume 
+
+	img{ //correctly sizes image on top
+		max-width:300px;
+	}
+	h2{
+		margin-top:15px;
+	}
+
+	.btn { //styles 'lets team up' button
+		width:150px;
+		height:40px;
+		font-size:1.2rem;
+		font-weight: bold;
+		color:white;
+		background-color:lightblue;
+		cursor:pointer; //creates pointing hand when hovering over button
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	} //end of button styles
+
+	@media (max-width:500px){ //styles topresumesection for devices 500px and under
+		img { //styles image in top resume for devices 500px and under under
+			max-width:100%;
+			width:100%;
+		}
+	}
+} //end of top half of page
+
+section.summary { // calls listenup summary and styles paragraphs in nest
+	p {
+		margin-top:0px;
+	}
+}
+
+section.skillset { //calls skillset
+	ul { //styles for unordered list 
+		width: 100%;
+		.flex-column();
+		justify-content:center;
+		li { //styles collective list items
+		padding:15px;
+		border:0.5px solid lightblue;
+		border-bottom:none;
+		display:flex;
+	}
+		li:first-child { //calling first list item
+			border-top-left-radius:3px; //rounds top left corner of list item
+			border-top-right-radius:3px; //rounds top right corner of list item
+		}
+		li:last-child {
+			border-bottom-left-radius:3px; //rounds bottom left corner
+			border-bottom-right-radius:3px; //" " right " "
+			border-bottom: 0.5px solid lightgrey;
+		} //li end
+	}//ul end
+} //section end
+
+section.work-history { //calling work-history section
+	table { //calling table nested under work-history
+		width:100%; //establishing that table width takes up 100% of work-history container
+	}
+	th { //calling table header and defining ruleset
+		border-top:1px solid grey;
+		border-bottom:1px solid grey;
+		text-align:left;
+		font-weight:bold;
+		vertical-align:middle; //places table header in middle of parent (table) element
+
+	}
+	tr { //calling table row element, styles rows only
+		height:45px;
+		td:first-child { //styles first child cell of parent table row
+		font-weight:bold;
+		}	
+	}
+	tr:nth-child(even){ //styles every 2nd child in parent element table row
+		background-color:lightblue;
+	}
+	td {
+		vertical-align:middle;
+	}
+	@media (max-width:500px){ // styles work-history for devices 500px and under
+		margin-top:20px;
+	}
+
+ } //(end work history)
+}
+
+.listen {
+	.flex-row(); 
+	justify-content:space-between;
+	padding-top:20px;
+	
+	.listenup {
+		width:50%;
+		padding-left:5px;
+	}
+
+	@media (max-width:500px){
+		.flex-column(); //changes .listen class from row to column when user device is 500px or under
+	}
+}
+
+.half {
+width: 48.5%; //establishing skillset summary half as taking up half of the parent element class 'listen'
+
+@media (max-width:500px) {
+	width:100%; //establishes that when screen size is 500px or below 'skillset summary half' class takes up half of parent 'listen'
+	}
+}
+
+footer.copyright {
+	height:80px;
+	margin-top:30px;
+	color:white;
+	background-color:plum;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
 
